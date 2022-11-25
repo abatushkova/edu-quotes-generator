@@ -1,0 +1,118 @@
+@use '../abstracts' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 10px;
+  background-color: $yellow-light;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 28px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: $white;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font: 700 2.4rem/3.2rem a;
+    font-family: inherit;
+
+    @include tablet {
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+    }
+    @include desktop {
+      font-size: 3.2rem;
+      line-height: 4rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    position: relative;
+    padding: 0 24px;
+    font: 2.2rem/2.8rem a;
+    font-family: inherit;
+  }
+
+  &__caption {
+    font: italic 1.6rem/2.4rem a;
+    font-family: inherit;
+    margin-top: 16px;
+    text-align: right;
+    &::before {
+      content: '— ';
+      white-space: pre;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $gray-c;
+    padding-top: 28px;
+  }
+
+  &__button {
+    height: 40px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    border-radius: 23px;
+    font: 1.6rem/2.4rem a;
+    font-family: inherit;
+    border: none;
+    background-color: $brown;
+    color: $white;
+    font-weight: 500;
+    transition: background-color 300ms cubic-bezier(0.2, 0, 0, 1);
+    cursor: pointer;
+    &:not(.card_button--round):focus,
+    &:not(.card_button--round):hover {
+      background-color: $brown-light;
+    }
+  }
+
+  &__button--round {
+    border-radius: 50%;
+    background-color: $white;
+    color: $brown;
+    &:focus,
+    &:hover {
+      background-color: $brown;
+      color: $white;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &--left {
+      top: 0;
+      left: 0;
+      background-image: url('./icons/quote-left.svg');
+    }
+    &--right {
+      right: 0;
+      bottom: 0;
+      background-image: url('./icons/quote-right.svg');
+    }
+  }
+}
