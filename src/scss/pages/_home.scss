@@ -47,6 +47,26 @@
     padding: 0 24px;
     font: 2.2rem/2.8rem a;
     font-family: inherit;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: .8em;
+      height: .8em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      background-image: url('./icons/quote-left.svg');
+    }
+    &::after {
+      right: 0;
+      bottom: 0;
+      background-image: url('./icons/quote-right.svg');
+    }
   }
 
   &__caption {
@@ -71,7 +91,7 @@
     height: 40px;
     padding: 0 24px;
     box-sizing: border-box;
-    border-radius: 23px;
+    border-radius: 20px;
     font: 1.6rem/2.4rem a;
     font-family: inherit;
     border: none;
@@ -94,25 +114,6 @@
     &:hover {
       background-color: $brown;
       color: $white;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    &--left {
-      top: 0;
-      left: 0;
-      background-image: url('./icons/quote-left.svg');
-    }
-    &--right {
-      right: 0;
-      bottom: 0;
-      background-image: url('./icons/quote-right.svg');
     }
   }
 }

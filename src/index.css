@@ -167,9 +167,28 @@ a {
 }
 .card__text {
   position: relative;
-  padding: 0 28px;
+  padding: 0 24px;
   font: 2.2rem/2.8rem a;
   font-family: inherit;
+}
+.card__text::before, .card__text::after {
+  content: "";
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card__text::before {
+  top: 0;
+  left: 0;
+  background-image: url("./icons/quote-left.svg");
+}
+.card__text::after {
+  right: 0;
+  bottom: 0;
+  background-image: url("./icons/quote-right.svg");
 }
 .card__caption {
   font: italic 1.6rem/2.4rem a;
@@ -196,7 +215,7 @@ a {
   padding: 0 24px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 23px;
+  border-radius: 20px;
   font: 1.6rem/2.4rem a;
   font-family: inherit;
   border: none;
@@ -218,22 +237,4 @@ a {
 .card__button--round:focus, .card__button--round:hover {
   background-color: #432b00;
   color: #fff;
-}
-.card__icon {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.card__icon--left {
-  top: 0;
-  left: 0;
-  background-image: url("./icons/quote-left.svg");
-}
-.card__icon--right {
-  right: 0;
-  bottom: 0;
-  background-image: url("./icons/quote-right.svg");
 }
