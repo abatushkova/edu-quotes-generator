@@ -88,25 +88,39 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
-    padding: 0 24px;
     box-sizing: border-box;
-    border-radius: 20px;
     font: 1.6rem/2.4rem a;
     font-family: inherit;
+    font-weight: 500;
+    transition:
+      background-color 300ms cubic-bezier(0.2, 0, 0, 1),
+      color 300ms cubic-bezier(0.2, 0, 0, 1);
+    cursor: pointer;
+  }
+
+  &__button--filled {
+    padding: 0 24px;
     border: none;
+    border-radius: 20px;
     background-color: $brown;
     color: $white;
-    font-weight: 500;
-    transition: background-color 300ms cubic-bezier(0.2, 0, 0, 1);
-    cursor: pointer;
-    &:not(.card_button--round):focus,
-    &:not(.card_button--round):hover {
+    &:focus,
+    &:hover {
       background-color: $brown-light;
     }
   }
 
+  &__button--outlined {
+    border: 2px solid $brown;
+  }
+
   &__button--round {
+    width: 40px;
+    padding: 0;
     border-radius: 50%;
     background-color: $white;
     color: $brown;

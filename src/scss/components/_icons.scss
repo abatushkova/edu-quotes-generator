@@ -1,0 +1,15 @@
+.icon {
+  fill: currentColor;
+
+  &--20 {
+    font-size: 2rem;
+  }
+
+  &__body {
+    display: block;
+    width: 1em;
+    height: 1em;
+    transform: translateX(0);
+    background: inherit;
+  }
+}
