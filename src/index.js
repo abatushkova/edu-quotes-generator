@@ -3,11 +3,11 @@ const quote = document.querySelector('#quoteContent');
 const author = document.querySelector('#quoteAuthor');
 const copyBtn = document.querySelector('#copy');
 const generateBtn = document.querySelector('#generate');
-const spinner = document.querySelector('#spinner');
+const preloader = document.querySelector('#preloader');
 const error = document.querySelector('#error');
 
 const handleError = (err) => {
-  spinner.classList.add('hide');
+  preloader.classList.add('hide');
   error.classList.remove('hide');
   error.textContent = 'An error occurred!';
   console.error(err);
@@ -23,13 +23,13 @@ const fetchData = async () => {
 const generateQuote = () => {
   error.classList.add('hide');
   cardContent.classList.add('hide');
-  spinner.classList.remove('hide');
+  preloader.classList.remove('hide');
 
   fetchData()
     .then(data => {
       quote.textContent = data.content;
       author.textContent = data.author;
-      spinner.classList.add('hide');
+      preloader.classList.add('hide');
       cardContent.classList.remove('hide');
     })
     .catch(handleError);

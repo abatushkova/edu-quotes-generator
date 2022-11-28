@@ -141,7 +141,7 @@ a {
   background: inherit;
 }
 
-.spinner {
+.preloader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,24 +151,24 @@ a {
   width: 40px;
   margin: 9px auto;
 }
-.spinner div {
+.preloader div {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: #6750A4;
-  -webkit-animation: spin 0.8s ease-in-out infinite;
-          animation: spin 0.8s ease-in-out infinite;
+  -webkit-animation: type 0.8s ease-in-out infinite;
+          animation: type 0.8s ease-in-out infinite;
 }
-.spinner div:nth-child(2) {
+.preloader div:nth-child(2) {
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
 }
-.spinner div:nth-child(3) {
+.preloader div:nth-child(3) {
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes type {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -183,7 +183,7 @@ a {
   }
 }
 
-@keyframes spin {
+@keyframes type {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
