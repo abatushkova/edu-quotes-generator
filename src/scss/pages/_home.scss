@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  width: 100%;
   padding: 28px;
   border-radius: 16px;
   box-sizing: border-box;
@@ -39,7 +40,8 @@
   }
 
   &__content {
-    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray-c;
   }
 
   &__text {
@@ -83,8 +85,7 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid $gray-c;
-    padding-top: 28px;
+    margin-top: 28px;
   }
 
   &__button {
