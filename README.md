@@ -5,6 +5,6 @@ Educational project with simple quotes generator. Click on New Quote button and 
 ## Built with
 - Flexbox layout
 - Animation
-- SASS (.scss)
+- Sass (.scss)
 - Fetch API
 - JavaScript
