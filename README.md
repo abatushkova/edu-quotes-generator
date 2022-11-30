@@ -1,4 +1,4 @@
-# edu-quotes-generator
+# Quotes Generator
 Educational project with simple quotes generator. Click on New Quote button and get a new random quote from api.quotable.io with three-dots loading animation.  
 [Live Demo](https://abatushkova.github.io/edu-quotes-generator/)
 
